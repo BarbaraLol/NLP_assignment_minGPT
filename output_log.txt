@@ -1,0 +1,108 @@
+Running generate_en.py...
+2025-01-23 16:18:50.513196: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1737649130.656824    1088 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1737649130.699364    1088 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-23 16:18:51.135416: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: The/ cat/ jumped/ n/imb/ly/ from/ the/ table/ to/ the/ chair/,/ landing/ with/ elegance/ in/ front/ of/ the/ open/ window/ in/ the/ living/ room/ How/ did/ the/ cat/ land/The/ cat/ landed/ with
+Detokenized input as strings: The/ cat/ jumped/ n/imb/ly/ from/ the/ table/ to/ the/ chair/,/ landing/ with/ cl/ums/iness/ in/ front/ of/ the/ open/ window/ in/ the/ living/ room/ How/ did/ the/ cat/ land/The/ cat/ landed/ with
+
+Probabilities for specific tokens in clean input:
+{'cat': 1.179866071510105e-08, 'jumped': 1.6002990771424308e-07, 'table': 1.7927472839573966e-08, 'chair': 1.532134596970991e-08, 'window': 6.187113932298871e-09}
+Number of layers: 24
+Sequence length: 37
+Processing token: cat
+Processing token: jumped
+Processing token: table
+Processing token: chair
+Processing token: window
+
+Probabilities for specific tokens in corrupted input:
+{'cat': 1.5276687292953284e-07, 'jumped': 5.956870614554077e-07, 'table': 2.6909672712349675e-08, 'chair': 1.731358700851615e-08, 'window': 3.53103501993246e-08}
+Finished running generate_en.py
+----------------------------------------
+Running generate_fr.py...
+2025-01-23 16:51:10.162985: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1737651070.307603    1200 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1737651070.350035    1200 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-23 16:51:10.811140: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: Le/ chat/ sa/uta/ rapid/ement/ dep/u/is/ la/ table/ vers/ la/ cha/ise/ tomb/ant/ dou/ce/ment/ pres/ de/ la/ f/en/et/re/ grand/e/ d/ans/ la/ ma/ison/Le/ chat/ tomb/a
+Detokenized input as strings: Le/ chat/ sa/uta/ rapid/ement/ dep/u/is/ la/ table/ vers/ la/ cha/ise/ tomb/ant/ bru/y/am/ment/ pres/ de/ la/ f/en/et/re/ grand/e/ d/ans/ la/ ma/ison/Le/ chat/ tomb/a
+
+Probabilities for specific tokens in clean input:
+{'chat': 7.893202109698905e-07, 'sauta': 0.00017706970720610116, 'table': 5.216966059151673e-08, 'chaise': 0.00024866189450278853, 'fenetre': 0.00015356630426310858}
+Number of layers: 24
+Sequence length: 39
+Processing token: chat
+Processing token: sauta
+Processing token: table
+Processing token: chaise
+Processing token: fenetre
+
+Probabilities for specific tokens in corrupted input:
+{'chat': 9.239011887984816e-06, 'sauta': 0.008260542527750658, 'table': 4.179845802809723e-08, 'chaise': 8.253391933976673e-05, 'fenetre': 0.0033560206793481484}
+Finished running generate_fr.py
+----------------------------------------
+Running generate_it.py...
+2025-01-23 17:26:49.863555: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1737653209.999102    1217 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1737653210.034821    1217 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-23 17:26:50.521211: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: Il/ g/atto/ sal/to/ ag/il/ment/e/ d/al/ t/av/olo/ all/a/ s/edia/ at/ter/rand/o/ con/ ele/gan/za/ d/av/anti/ all/a/ finest/ra/ a/per/ta/ in/ sal/otto/ Come/ at/ter/ro/ il/ g/atto/Il/ g/atto/ at/ter/ro/ con
+Detokenized input as strings: Il/ g/atto/ sal/to/ ag/il/ment/e/ d/al/ t/av/olo/ all/a/ s/edia/ at/ter/rand/o/ con/ go/ff/agg/ine/ d/av/anti/ all/a/ finest/ra/ a/per/ta/ in/ sal/otto/ Come/ at/ter/ro/ il/ g/atto/Il/ g/atto/ at/ter/ro/ con
+Clean sequence length after padding: 54
+Corrupted sequence length after padding: 54
+
+Probabilities for specific tokens in clean input:
+{'gatto': 0.0008899024542188272, 'salto': 0.000657313532428816, 'tavolo': 0.0012709248294413555, 'sedia': 0.0006696882446135533, 'finestra': 0.00021048065718787257}
+Number of layers: 24
+Sequence length: 54
+Processing token: gatto
+Processing token: salto
+Processing token: tavolo
+Processing token: sedia
+Processing token: finestra
+
+Probabilities for specific tokens in corrupted input:
+{'gatto': 0.004649580823752331, 'salto': 0.00010542709787841886, 'tavolo': 0.0019555867547751404, 'sedia': 0.0002494883034387385, 'finestra': 0.0010128940193681046}
+Finished running generate_it.py
+----------------------------------------
+Running generate_es.py...
+2025-01-23 18:23:39.665144: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1737656619.800654    1282 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1737656619.840174    1282 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-23 18:23:40.304075: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: El/ g/ato/ br/in/co/ rapid/o/ des/de/ la/ mes/a/ h/acia/ la/ s/illa/ c/ay/endo/ c/erc/a/ de/ la/ vent/ana/ grand/e/ en/ la/ sal/a/El/ g/ato/ c/ay/o
+Detokenized input as strings: El/ g/ato/ br/in/co/ rapid/o/ des/de/ la/ mes/a/ h/acia/ la/ s/illa/ trope/z/ando/ c/erc/a/ de/ la/ vent/ana/ grand/e/ en/ la/ sal/a/El/ g/ato/ c/ay/o
+Clean sequence length after padding: 40
+Corrupted sequence length after padding: 40
+
+Probabilities for specific tokens in clean input:
+{'gato': 2.022383569055819e-05, 'brinco': 0.003438830723098363, 'mesa': 3.4131112215618487e-05, 'silla': 5.037818311848241e-06, 'ventana': 3.152172666887054e-05}
+Number of layers: 24
+Sequence length: 40
+Processing token: gato
+Processing token: brinco
+Processing token: mesa
+Processing token: silla
+Processing token: ventana
+
+Probabilities for specific tokens in corrupted input:
+{'gato': 0.002446840280754259, 'brinco': 0.01189713878557086, 'mesa': 0.001728916249703616, 'silla': 0.0005905320576857775, 'ventana': 0.00043760887638200074}
+Finished running generate_es.py
+----------------------------------------

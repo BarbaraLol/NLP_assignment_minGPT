@@ -3,4 +3,6 @@ __pycache__/
 *.swp
 .env
 .pylintrc
+./output_log.txt
 ./prompt.txt
+
