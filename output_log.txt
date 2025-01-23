@@ -1,0 +1,84 @@
+Running generate_en.py...
+QSocketNotifier: Can only be used with threads started with QThread
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: The/ cat/ sat/ on/ the/ mat/ while/ the/ dog/ bark/ed/ loudly/,/ and/ the/ sun/ shone/ brightly/ in/ the/ sky/.
+Detokenized input as strings: The/ cat/ sat/ on/ the/ mat/ while/ the/ dog/ bark/ed/ quietly/,/ and/ the/ sun/ shone/ brightly/ in/ the/ sky/.
+
+Probabilities for specific tokens in clean input:
+{'cat': 2.7960513193647785e-07, 'dog': 4.111164173536963e-07, 'barked': 3.37793926163954e-06, 'loudly': 4.7034048957783625e-06, 'quietly': 1.214131765570059e-06}
+Number of layers: 24
+Sequence length: 22
+Processing token: cat
+Processing token: dog
+Processing token: barked
+Processing token: loudly
+Processing token: quietly
+
+Probabilities for specific tokens in corrupted input:
+{'cat': 1.527666455558574e-07, 'dog': 4.179754498068178e-08, 'barked': 2.3538700872904883e-06, 'loudly': 4.369664690528907e-06, 'quietly': 3.267240889615053e-06}
+Finished running generate_en.py
+----------------------------------------
+Running generate_fr.py...
+QSocketNotifier: Can only be used with threads started with QThread
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: Le/ chat/ s/'/est/ ass/is/ sur/ le/ tap/is/ p/endant/ que/ le/ ch/ien/ ab/oy/ait/ bru/y/am/ment/,/ et/ le/ sole/il/ brill/ait/ d/ans/ le/ c/iel/.
+Detokenized input as strings: Le/ chat/ s/'/est/ ass/is/ sur/ le/ tap/is/ p/endant/ que/ le/ ch/ien/ ab/oy/ait/ calm/ement/,/ et/ le/ sole/il/ brill/ait/ d/ans/ le/ c/iel/.
+
+Probabilities for specific tokens in clean input:
+{'chat': 1.6998312757365852e-09, 'chien': 3.852599750331365e-08, 'aboyait': 5.933766553667397e-07, 'bruyamment': 1.110070209087155e-06, 'calmement': 3.712495431074103e-07}
+Number of layers: 24
+Sequence length: 35
+Processing token: chat
+Processing token: chien
+Processing token: aboyait
+Processing token: bruyamment
+Processing token: calmement
+
+Probabilities for specific tokens in corrupted input:
+{'chat': 9.238990060111973e-06, 'chien': 0.00705796162947081, 'aboyait': 0.003021497388544958, 'bruyamment': 0.032381818039084465, 'calmement': 0.002847120674459802}
+Finished running generate_fr.py
+----------------------------------------
+Running generate_it.py...
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: Il/ g/atto/ si/ �/�/ sed/uto/ sul/ t/app/eto/ ment/re/ il/ cane/ ab/ba/ia/va/ rumor/os/ament/e/,/ e/ il/ sole/ splend/eva/ n/el/ c/iel/o/.
+Detokenized input as strings: Il/ g/atto/ si/ �/�/ sed/uto/ sul/ t/app/eto/ ment/re/ il/ cane/ ab/ba/ia/va/ sil/enz/ios/ament/e/,/ e/ il/ sole/ splend/eva/ n/el/ c/iel/o/.
+Clean sequence length after padding: 37
+Corrupted sequence length after padding: 37
+
+Probabilities for specific tokens in clean input:
+{'gatto': 3.31409582940978e-05, 'cane': 8.93468443052825e-05, 'abbaiava': 1.3972007650409068e-05, 'rumorosamente': 0.0001057851178121183, 'silenziosamente': 0.0001099729717708442}
+Number of layers: 24
+Sequence length: 37
+Processing token: gatto
+Processing token: cane
+Processing token: abbaiava
+Processing token: rumorosamente
+Processing token: silenziosamente
+
+Probabilities for specific tokens in corrupted input:
+{'gatto': 0.004649539392630686, 'cane': 0.006470134831033647, 'abbaiava': 0.008007179732317127, 'rumorosamente': 0.00029412435253561853, 'silenziosamente': 0.0003544501118994958}
+Finished running generate_it.py
+----------------------------------------
+Running generate_es.py...
+Running on device: cpu
+number of parameters: 354.82M
+Detokenized input as strings: El/ g/ato/ se/ sent/ó/ en/ la/ al/f/omb/ra/ m/ient/ras/ el/ per/ro/ lad/r/aba/ ru/id/os/ament/e/,/ y/ el/ sol/ brill/aba/ en/ el/ c/iel/o/.
+Detokenized input as strings: El/ g/ato/ se/ sent/ó/ en/ la/ al/f/omb/ra/ m/ient/ras/ el/ per/ro/ lad/r/aba/ sil/en/ci/os/ament/e/,/ y/ el/ sol/ brill/aba/ en/ el/ c/iel/o/.
+
+Probabilities for specific tokens in clean input:
+{'gato': 3.095767215199885e-05, 'perro': 2.3591384660903714e-05, 'ladraba': 3.855081479287037e-05, 'ruidosamente': 8.445550326996454e-05, 'silenciosamente': 0.00016417327481121902}
+Number of layers: 24
+Sequence length: 39
+Processing token: gato
+Processing token: perro
+Processing token: ladraba
+Processing token: ruidosamente
+Processing token: silenciosamente
+
+Probabilities for specific tokens in corrupted input:
+{'gato': 0.002446840280754259, 'perro': 0.0009862023871392012, 'ladraba': 0.001173606777228997, 'ruidosamente': 0.004907936568997684, 'silenciosamente': 0.005602239240488416}
+Finished running generate_es.py
+----------------------------------------
