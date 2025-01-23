@@ -12,7 +12,7 @@ from mingpt.utils import set_seed
 FACT_CLEAN = "Il gatto salto agilmente dal tavolo alla sedia atterrando con eleganza davanti alla finestra aperta in salotto Come atterro il gatto"
 FACT_CORRUPTED = FACT_CLEAN.replace("eleganza", "goffaggine")
 END = "Il gatto atterro con"
-SPECIFIC_TOKENS = ["gatto", "salto", "tavolo", "sedia", "finestra"]
+SPECIFIC_TOKENS = ["eleganza", "goffaggine", "tavolo", "sedia", "finestra"]
 
 def get_specific_token_probs(logits, tokenizer, tokens):
     """Get probabilities of specific tokens from logits, handling multi-token cases."""

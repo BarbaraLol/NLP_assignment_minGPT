@@ -12,7 +12,7 @@ from mingpt.utils import set_seed
 FACT_CLEAN = "The cat jumped nimbly from the table to the chair, landing with elegance in front of the open window in the living room How did the cat land"
 FACT_CORRUPTED = FACT_CLEAN.replace("elegance", "clumsiness")
 END = "The cat landed with"
-SPECIFIC_TOKENS = ["cat", "jumped", "table", "chair", "window"]
+SPECIFIC_TOKENS = ["elegance", "clumsiness", "table", "chair", "window"]
 
 
 def get_specific_token_probs(logits, tokenizer, tokens):
