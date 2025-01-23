@@ -100,7 +100,8 @@ for specific_token in SPECIFIC_TOKENS:
 
     # Iterate through layers and positions
     for layer in range(n_layers):
-        for pos in range(seq_length):
+        seq_length_clean = clean_activations[f'layer_{layer}'].size(1)  # Fix: Get correct sequence length
+        for pos in range(min(seq_length, seq_length_clean)):  # Fix: Guard against out-of-bounds
             # Forward pass with patching
             logits_patched, _ = model(
                 corrupted.to(device),
