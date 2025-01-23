@@ -33,7 +33,7 @@ def generate_heatmap(model_type, diff_matrix, tokens, specific_token):
     plt.figure(figsize=(30, 16))
     sns.heatmap(diff_matrix,
                 cmap='crest',
-                annot=True,
+                annot=False,
                 xticklabels=tokens)
     plt.xticks(rotation=45, ha='right')
     plt.xlabel('Token')
