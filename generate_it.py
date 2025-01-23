@@ -11,7 +11,7 @@ from mingpt.utils import set_seed
 # Define the clean and corrupted sentences in Italian
 FACT_CLEAN = "Il gatto salto agilmente dal tavolo alla sedia atterrando con eleganza davanti alla finestra aperta in salotto Come atterro il gatto"
 FACT_CORRUPTED = FACT_CLEAN.replace("eleganza", "goffaggine")
-END = "Il gatto atterro"
+END = "Il gatto atterro con"
 SPECIFIC_TOKENS = ["gatto", "salto", "tavolo", "sedia", "finestra"]
 
 def get_specific_token_probs(logits, tokenizer, tokens):
