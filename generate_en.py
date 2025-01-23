@@ -11,7 +11,7 @@ from mingpt.utils import set_seed
 # Define the clean and corrupted sentences in English
 FACT_CLEAN = "The cat jumped nimbly from the table to the chair, landing with elegance in front of the open window in the living room How did the cat land"
 FACT_CORRUPTED = FACT_CLEAN.replace("elegance", "clumsiness")
-END = "The cat landed"
+END = "The cat landed with"
 SPECIFIC_TOKENS = ["cat", "jumped", "table", "chair", "window"]
 
 

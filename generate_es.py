@@ -9,10 +9,10 @@ import torch.nn.functional as F
 from mingpt.utils import set_seed
 
 # Define the clean and corrupted sentences in Spanish
-FACT_CLEAN = "El gato saltó ágilmente de la mesa a la silla, aterrizando con elegancia frente a la ventana abierta en la sala de estar Cómo aterrizó el gato"
-FACT_CORRUPTED = FACT_CLEAN.replace("elegancia", "torpeza")
-END = "El gato aterrizó"
-SPECIFIC_TOKENS = ["gato", "saltó", "mesa", "silla", "ventana"]
+FACT_CLEAN = "El gato brinco rapido desde la mesa hacia la silla cayendo cerca de la ventana grande en la sala"
+FACT_CORRUPTED = FACT_CLEAN.replace("cayendo", "tropezando")
+END = "El gato cayo"
+SPECIFIC_TOKENS = ["gato", "brinco", "mesa", "silla", "ventana"]
 
 def get_specific_token_probs(logits, tokenizer, tokens):
     """Get probabilities of specific tokens from logits, handling multi-token cases."""
