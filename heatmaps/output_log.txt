@@ -1,0 +1,91 @@
+Running generate_en.py...
+Running on device: cuda
+number of parameters: 354.82M
+Detokenized input as strings: The/ cat/ jumped/ n/imb/ly/ from/ the/ table/ to/ the/ chair/,/ landing/ with/ elegance/ in/ front/ of/ the/ open/ window/ in/ the/ living/ room/ How/ did/ the/ cat/ land/The/ cat/ landed/ with
+Detokenized input as strings: The/ cat/ jumped/ n/imb/ly/ from/ the/ table/ to/ the/ chair/,/ landing/ with/ cl/ums/iness/ in/ front/ of/ the/ open/ window/ in/ the/ living/ room/ How/ did/ the/ cat/ land/The/ cat/ landed/ with
+Clean sequence length after padding: 37
+Corrupted sequence length after padding: 37
+
+Probabilities for specific tokens in clean input:
+{'elegance': 0.0007184159876487684, 'cl': 4.7438345063710585e-05, 'ums': 2.142541234206874e-05, 'iness': 6.089342605264392e-06}
+Number of layers: 24
+Sequence length: 37
+Processing token: elegance
+Processing token: cl
+Processing token: ums
+Processing token: iness
+
+Probabilities for specific tokens in corrupted input:
+{'elegance': 4.783149762488392e-06, 'cl': 6.002813961458742e-07, 'ums': 3.8880411779018687e-08, 'iness': 9.521119892497154e-08}
+Finished running generate_en.py
+----------------------------------------
+Running generate_fr.py...
+Running on device: cuda
+number of parameters: 354.82M
+Detokenized input as strings: Le/ chat/ sa/uta/ rapid/ement/ dep/u/is/ la/ table/ vers/ la/ cha/ise/ tomb/ant/ dou/ce/ment/ pres/ de/ la/ f/en/et/re/ grand/e/ d/ans/ la/ ma/ison/Le/ chat/ tomb/a
+Detokenized input as strings: Le/ chat/ sa/uta/ rapid/ement/ dep/u/is/ la/ table/ vers/ la/ cha/ise/ tomb/ant/ bru/y/am/ment/ pres/ de/ la/ f/en/et/re/ grand/e/ d/ans/ la/ ma/ison/Le/ chat/ tomb/a
+Clean sequence length after padding: 39
+Corrupted sequence length after padding: 39
+
+Probabilities for specific tokens in clean input:
+{'dou': 0.0001953073515323922, 'ce': 1.4780321180296596e-05, 'ment': 1.5099055417522322e-05, 'bru': 3.209617102584161e-05, 'y': 4.204134165775031e-05, 'am': 3.840280987787992e-05}
+Number of layers: 24
+Sequence length: 39
+Processing token: dou
+Processing token: ce
+Processing token: ment
+Processing token: bru
+Processing token: y
+Processing token: am
+Processing token: ment
+
+Probabilities for specific tokens in corrupted input:
+{'dou': 0.000517294458404649, 'ce': 0.0037355381064116955, 'ment': 4.934845037496416e-06, 'bru': 0.004307989642256871, 'y': 0.0006616948521696031, 'am': 0.02740485779941082}
+Finished running generate_fr.py
+----------------------------------------
+Running generate_it.py...
+Running on device: cuda
+number of parameters: 354.82M
+Detokenized input as strings: Il/ g/atto/ sal/to/ ag/il/ment/e/ d/al/ t/av/olo/ all/a/ s/edia/ at/ter/rand/o/ con/ ele/gan/za/ d/av/anti/ all/a/ finest/ra/ a/per/ta/ in/ sal/otto/ Come/ at/ter/ro/ il/ g/atto/Il/ g/atto/ at/ter/ro/ con
+Detokenized input as strings: Il/ g/atto/ sal/to/ ag/il/ment/e/ d/al/ t/av/olo/ all/a/ s/edia/ at/ter/rand/o/ con/ go/ff/agg/ine/ d/av/anti/ all/a/ finest/ra/ a/per/ta/ in/ sal/otto/ Come/ at/ter/ro/ il/ g/atto/Il/ g/atto/ at/ter/ro/ con
+Clean sequence length after padding: 54
+Corrupted sequence length after padding: 54
+
+Probabilities for specific tokens in clean input:
+{'ele': 5.867209256393835e-05, 'gan': 3.0254718694777694e-06, 'za': 5.0410159019520506e-05, 'go': 6.326806760625914e-05, 'ff': 4.782615724252537e-05, 'agg': 0.00016248035535681993, 'ine': 3.052636020584032e-05}
+Number of layers: 24
+Sequence length: 54
+Processing token: ele
+Processing token: gan
+Processing token: za
+Processing token: go
+Processing token: ff
+Processing token: agg
+Processing token: ine
+
+Probabilities for specific tokens in corrupted input:
+{'ele': 2.738706143645686e-06, 'gan': 0.006730473600327969, 'za': 0.0072839874774217606, 'go': 0.0006666207918897271, 'ff': 0.009081405587494373, 'agg': 5.845256237080321e-05, 'ine': 3.429622302064672e-05}
+Finished running generate_it.py
+----------------------------------------
+Running generate_es.py...
+Running on device: cuda
+Detokenized input as strings: El/ g/ato/ br/in/co/ rapid/o/ des/de/ la/ mes/a/ h/acia/ la/ s/illa/ c/ay/endo/ c/erc/a/ de/ la/ vent/ana/ grand/e/ en/ la/ sal/a/El/ g/ato/ c/ay/o
+Detokenized input as strings: El/ g/ato/ br/in/co/ rapid/o/ des/de/ la/ mes/a/ h/acia/ la/ s/illa/ trope/z/ando/ c/erc/a/ de/ la/ vent/ana/ grand/e/ en/ la/ sal/a/El/ g/ato/ c/ay/o
+Clean sequence length after padding: 40
+Corrupted sequence length after padding: 40
+
+Probabilities for specific tokens in clean input:
+{'c': 5.285752558847889e-05, 'ay': 1.7104047174143489e-06, 'endo': 2.5702984203235246e-05, 'trope': 4.6512116114172386e-05, 'z': 3.6251163692213595e-05, 'ando': 0.0001360143069177866}
+Number of layers: 24
+Sequence length: 40
+Processing token: c
+Processing token: ay
+Processing token: endo
+Processing token: trope
+Processing token: z
+Processing token: ando
+
+Probabilities for specific tokens in corrupted input:
+{'c': 0.0010326424380764365, 'ay': 0.002047467278316617, 'endo': 2.1764901703136275e-06, 'trope': 0.009992942789722292, 'z': 0.014811295084655285, 'ando': 1.8029846614808775e-05}
+Finished running generate_es.py
+----------------------------------------
