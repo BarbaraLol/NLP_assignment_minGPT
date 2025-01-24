@@ -1,10 +1,4 @@
 Running generate_en.py...
-2025-01-23 19:32:08.107996: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1737660728.261865    1360 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1737660728.314095    1360 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-01-23 19:32:08.907174: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Running on device: cpu
 number of parameters: 354.82M
 Detokenized input as strings: The/ cat/ jumped/ n/imb/ly/ from/ the/ table/ to/ the/ chair/,/ landing/ with/ elegance/ in/ front/ of/ the/ open/ window/ in/ the/ living/ room/ How/ did/ the/ cat/ land/The/ cat/ landed/ with
@@ -25,12 +19,6 @@ Probabilities for specific tokens in corrupted input:
 Finished running generate_en.py
 ----------------------------------------
 Running generate_fr.py...
-2025-01-23 20:04:20.618739: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1737662660.762702    1375 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1737662660.811042    1375 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-01-23 20:04:21.299567: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Running on device: cpu
 number of parameters: 354.82M
 Detokenized input as strings: Le/ chat/ sa/uta/ rapid/ement/ dep/u/is/ la/ table/ vers/ la/ cha/ise/ tomb/ant/ dou/ce/ment/ pres/ de/ la/ f/en/et/re/ grand/e/ d/ans/ la/ ma/ison/Le/ chat/ tomb/a
@@ -51,12 +39,6 @@ Probabilities for specific tokens in corrupted input:
 Finished running generate_fr.py
 ----------------------------------------
 Running generate_it.py...
-2025-01-23 20:40:01.311242: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1737664801.472800    1393 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1737664801.515605    1393 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-01-23 20:40:01.951426: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Running on device: cpu
 number of parameters: 354.82M
 Detokenized input as strings: Il/ g/atto/ sal/to/ ag/il/ment/e/ d/al/ t/av/olo/ all/a/ s/edia/ at/ter/rand/o/ con/ ele/gan/za/ d/av/anti/ all/a/ finest/ra/ a/per/ta/ in/ sal/otto/ Come/ at/ter/ro/ il/ g/atto/Il/ g/atto/ at/ter/ro/ con
@@ -79,12 +61,6 @@ Probabilities for specific tokens in corrupted input:
 Finished running generate_it.py
 ----------------------------------------
 Running generate_es.py...
-2025-01-23 21:37:03.052790: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1737668223.204792    1410 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1737668223.240192    1410 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-01-23 21:37:03.667424: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Running on device: cpu
 number of parameters: 354.82M
 Detokenized input as strings: El/ g/ato/ br/in/co/ rapid/o/ des/de/ la/ mes/a/ h/acia/ la/ s/illa/ c/ay/endo/ c/erc/a/ de/ la/ vent/ana/ grand/e/ en/ la/ sal/a/El/ g/ato/ c/ay/o

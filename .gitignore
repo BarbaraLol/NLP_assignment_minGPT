@@ -5,4 +5,5 @@ __pycache__/
 .pylintrc
 ./output_log.txt
 ./prompt.txt
+./generate.py
 

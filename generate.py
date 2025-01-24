@@ -1,5 +1,9 @@
+FACT_CLEAN = "The cat jumped nimbly from the table to the chair, landing with elegance in front of the open window in the living room How did the cat land"
+FACT_CORRUPTED = FACT_CLEAN.replace("elegance", "clumsiness")
+END = "The cat landed with"
+SPECIFIC_TOKENS = ["elegance", "clumsiness"]
+
 import numpy as np
-import os
 import seaborn as sns
 import matplotlib.pyplot as plt
 import torch as th
@@ -8,44 +12,33 @@ from mingpt.bpe import BPETokenizer
 import torch.nn.functional as F
 from mingpt.utils import set_seed
 
-# Define the clean and corrupted sentences in English
-FACT_CLEAN = "The cat jumped nimbly from the table to the chair, landing with elegance in front of the open window in the living room How did the cat land"
-FACT_CORRUPTED = FACT_CLEAN.replace("elegance", "clumsiness")
-END = "The cat landed with"
-SPECIFIC_TOKENS = ["elegance", "cl", "ums", "iness"] # , "table", "chair", "window"
-
-
 def get_specific_token_probs(logits, tokenizer, tokens):
-    """Get probabilities of specific tokens from logits, handling multi-token cases."""
-    probs = F.softmax(logits, dim=-1)  # Apply softmax to logits
+    """Get probabilities of specific tokens from logits."""
+    probs = F.softmax(logits, dim=-1)
+    
+    # Tokenize each token and get all subword token IDs
+    token_ids_list = [tokenizer(token) for token in tokens]
+    
+    # Calculate probabilities for each token
     token_probs = {}
-
-    for token in tokens:
-        token_ids = tokenizer(token)[0]  # Get token IDs for the word
-        token_ids = token_ids.tolist() if isinstance(token_ids, th.Tensor) else token_ids
-
-        # Sum probabilities for all subword tokens
-        token_prob = sum(probs[0, token_id].item() for token_id in token_ids)
-        token_probs[token] = token_prob
-
+    for token, token_ids in zip(tokens, token_ids_list):
+        # Sum probabilities for all subword token IDs
+        token_probs[token] = sum(probs[0, token_id].item() for token_id in token_ids)
+    
     return token_probs
 
 def generate_heatmap(model_type, diff_matrix, tokens, specific_token):
     plt.figure(figsize=(30, 16))
     sns.heatmap(diff_matrix,
                 cmap='crest',
-                annot=False,
+                annot=True,
                 xticklabels=tokens)
     plt.xticks(rotation=45, ha='right')
     plt.xlabel('Token')
     plt.ylabel('Layer')
     plt.title(f"Patching Heatmap of '{specific_token}' Token in the Corrupted Input")
     plt.tight_layout()
-    
-    # Save to a specific directory
-    output_dir = "./heatmaps/"
-    os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
-    plt.savefig(f'{output_dir}patching_heatmap_{model_type}_{specific_token}.png')
+    plt.savefig(f'patching_heatmap_{model_type}_{specific_token}.png')
     plt.close()
 
 def tokenize_and_print(tokenizer, text, device):
@@ -89,40 +82,28 @@ tokens = [tokenizer.decode(th.tensor([corrupted[0, i].item()])) for i in range(s
 
 # Iterate through each specific token
 for specific_token in SPECIFIC_TOKENS:
-    print(f"Processing token: {specific_token}")
     diff_matrix = np.zeros((n_layers, seq_length))
+    token_idx = tokenizer(specific_token)[0]
     
-    # Get token IDs for clean and corrupted input
-    token_ids_clean = tokenizer(specific_token)[0]
-    token_ids_clean = token_ids_clean.tolist() if isinstance(token_ids_clean, th.Tensor) else token_ids_clean
-
-    token_ids_corrupted = tokenizer(specific_token.replace("loudly", "quietly"))[0]
-    token_ids_corrupted = token_ids_corrupted.tolist() if isinstance(token_ids_corrupted, th.Tensor) else token_ids_corrupted
-
     # Iterate through layers and positions
     for layer in range(n_layers):
-        seq_length_clean = clean_activations[f'layer_{layer}'].size(1)  # Fix: Get correct sequence length
-        for pos in range(min(seq_length, seq_length_clean)):  # Fix: Guard against out-of-bounds
+        for pos in range(seq_length):
             # Forward pass with patching
-            logits_patched, _ = model(
-                corrupted.to(device),
-                patch_params=(layer, pos, clean_activations[f'layer_{layer}'][:, pos, :])
-            )
-
+            logits_patched, _ = model(corrupted.to(device), 
+                                    patch_params=(layer, pos, clean_activations[f'layer_{layer}'][:, pos, :]))
+            
             # Convert logits to probabilities
+            clean_probs = F.softmax(reference_logits, dim=-1)
             patched_probs = F.softmax(model.last_token_logits[0], dim=-1)
             
-            # Compute probabilities for clean and corrupted
-            clean_prob = sum(reference_logits[token_id].item() for token_id in token_ids_clean)
-            patched_prob = sum(patched_probs[token_id].item() for token_id in token_ids_corrupted)
+            # Compute probability difference
+            diff_matrix[layer, pos] = patched_probs[token_idx].item() - clean_probs[token_idx].item()
 
-            # Compute the probability difference
-            diff_matrix[layer, pos] = patched_prob - clean_prob
-
-    # Generate heatmap
+    # Visualize results with token labels
     generate_heatmap(model_type, diff_matrix, tokens, specific_token)
 
 # Get predictions for corrupted input
-logits_corrupted, _ = model(corrupted.to(device))
+logits_corrupted, _ = model(corrupted.to(device), patch_params=(n_layers,seq_length, clean_activations[f'layer_{n_layers-1}'][:, seq_length-1, :]))
+# Get top predictions for corrupted input
 print("\nProbabilities for specific tokens in corrupted input:")
-print(get_specific_token_probs(logits_corrupted[0], tokenizer, SPECIFIC_TOKENS))
+print(get_specific_token_probs(model.last_token_logits, tokenizer, SPECIFIC_TOKENS))
